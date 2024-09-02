@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Passwprd Generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Password Generator</title>
+
 </head>
 <body>
-    
-    <script src="script.js"></script>
+  <div class="container">
+    <h1>Generate password</h1>
+    <div class="input-group">
+      <label for="password">Generated password:</label>
+      <input type="text" id="password" placeholder="Your generated password" readonly>
+      <button class="refresh" onclick="generatePassword()"><i class="fa fa-refresh"></i></button>
+    </div>
+    <div class="input-group">
+      <label for="length">Character length:</label>
+      <input type="range" id="length" min="12" max="32" value="12" class="slider">
+      <span id="length-value">12</span>
+    </div>
+    <div class="settings">
+      <h2>Settings</h2>
+      <div class="setting">
+        <label for="uppercase">Include uppercase letters</label>
+        <input type="checkbox" id="uppercase" checked>
+      </div>
+      <div class="setting">
+        <label for="lowercase">Include lowercase letters</label>
+        <input type="checkbox" id="lowercase" checked>
+      </div>
+      <div class="setting">
+        <label for="numbers">Include numbers</label>
+        <input type="checkbox" id="numbers" checked>
+      </div>
+      <div class="setting">
+        <label for="symbols">Include symbols</label>
+        <input type="checkbox" id="symbols">
+      </div>
+    </div>
+    <button class="generate-button" onclick="generatePassword()">Generate Password</button>
+    <div class="footer">
+      <a href="https://github.com/parv68" target="_blank">Created by PARV with ❤️❤️</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
